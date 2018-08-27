@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script>
+    function changeSentence1(sentenceId) {
+        document.getElementById(sentenceId).innerHTML = "Texto escrito con una función en el header.";
+    }
+</script>
+</head>
+
+<body>
+
+<!--############################################-->
+<!--############################################-->
+<h2>Modificando contenido de un HTML</h2>
+
+<p id="texto1">JS puede modificar el contenido de un HTML</p>
+
+<p>
+    <button type="button" onclick="document.getElementById('texto1').innerHTML = 'Hello World!'">Hola mundo!</button>
+
+    <button type="button" onclick="document.getElementById('texto1').style.fontSize='35px'">Cambiar tamaño letra</button>
+</p>
+<p>
+    <button type="button" onclick="document.getElementById('texto1').style.display='none'">No mostrar</button>
+
+    <button type="button" onclick="document.getElementById('texto1').style.display='block'">Mostrar</button>
+</p>
+
+<button onclick="document.getElementById('character').src='mercy.png'">Mercy!</button>
+
+<img id="character" src="mercy.png" style="width:100px">
+
+<button onclick="document.getElementById('character').src='soldier.png'">Soldier!</button>
+
+<!--############################################-->
+<!--############################################-->
+<h2>Javascript code en Cuerpo del HTML</h2>
+
+<p id="texto2"></p>
+
+<button type="button" onclick="changeSentence1('texto2')">Cambiar texto</button>
+<button type="button" onclick="changeSentence2('texto2')">Cambiar texto</button>
+<button type="button" onclick="changeSentence3('texto2')">Cambiar texto</button>
+
+<!--############################################-->
+<!--############################################-->
+<h2> Escribiendo en HTML con JS</h2>
+
+<script>
+    document.write(5 + 5);
+    document.write(" document.write se usa para testiar");
+</script>
+
+<br>
+
+<button type="button" onclick="document.write('olakease')">Borrar todo el HTML y poner un ola ke ase</button>
+
+<!--############################################-->
+<!--############################################-->
+<script>
+    document.getElementById("texto2").innerHTML = "Este texto fui puesto por script de JS";
+    function changeSentence2(sentenceId) {
+        document.getElementById(sentenceId).innerHTML = "Texto escrito con función al final del body. Esto es mejor para el performance.";
+    }
+</script>
+<script src="clase1.js"></script>
+</body>
+</html>
